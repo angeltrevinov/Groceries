@@ -1,16 +1,17 @@
-<StackLayout>
+<StackLayout #container>
     <!-- Image icon -->
     <Image src="res://logo_login" stretch="none"
            horizontalAlignment="center"></Image>
     <!-- Enter mail -->
-    <TextField [(ngModel)]="user.email"
+    <TextField #email
+               [(ngModel)]="user.email"
                hint="Email Address"
                keyboardType="email"
                autocorrect="false"
                autocapitalizationType="none">
     </TextField>
     <!-- Enter password -->
-    <TextField
+    <TextField #password
             [(ngModel)]="user.password"
             hint="Password" secure="true"></TextField>
     <!-- Buttons -->
